@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table id="table1">
+        <tr>
+            <th>
+                Employee ID
+            </th>
+            <th>
+                Employee Name
+            </th>
+        </tr>
+    </table>
+
+    <form>
+        <input type="number" value="id" id="id" />
+        <input type="text" value="Name" id="Name" />
+        <input type="button" onclick="mydata()" value="Submit" id="Submit">
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        function mydata() {
+            let id = $("#id").val();
+            Name = $("#Name").val();
+
+            $.post(" http://localhost:3000/Employee", {
+                id: id,
+                Name: Name
+            }, function (response) {
+                alert("success!!");
+            });
+        }
+    </script>
+</body>
+
+</html>

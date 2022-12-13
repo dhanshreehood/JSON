@@ -1,0 +1,22 @@
+{
+  "formname": [
+    {
+      "id": 1,
+      "Name": "json singh",
+      "City": "jsonpur",
+      "Mno" : "123456787"
+    },
+    {
+      "id": 2,
+      "Name": "abcd",
+      "City": "wahiyad",
+      "Mno" : "123455587"
+    },
+    {
+      "id": 3,
+      "Name": "abcd",
+      "City": "wahiyad",
+      "Mno" : "123455587"
+    }
+  ]
+}

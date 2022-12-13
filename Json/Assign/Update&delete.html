@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <form>
+        <input type="number" id="eid"/>
+        <input type="text" id="ename"/>
+        <input type="text" id="ecity"/>
+        <input type="number" id="enumber"/>
+        <input type="submit" onclick="postData()"/>
+
+    </form>
+
+    <script>
+        function postData(){
+            var sid = $("#eid").val();
+            var sname = $("#ename").val();
+            var scity = $("#ecity").val();
+            var smno = $("#enumber").val();
+
+            $.post("http://localhost:3000/formname", {
+                id: sid,
+                Name: sname,
+                City: scity,
+                Mno: smno
+            }, function (response) {
+                alert("success!!");
+            });
+        }
+        
+
+    </script>
+</body>
+</html>
